@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{0F33B939-86FD-4BB3-BFAD-2FE02A994DFD}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RTBluetoothPrint/PrintController.cs">
+    <Files>
+      <File FileName="RTBluetoothPrint/RTBluetoothPrint.cs" Line="20" Column="4" />
+      <File FileName="RTBluetoothPrint/PrintController.cs" Line="13" Column="70" />
+      <File FileName="RTBluetoothPrint/DeviceListPage.xaml.cs" Line="47" Column="44" />
+      <File FileName="RTBluetoothPrint/IPrint.cs" Line="5" Column="3" />
+      <File FileName="Droid/PrintImplementation.cs" Line="5" Column="63" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.RTBluetoothPrint.Droid PreferredExecutionTarget="Android.AVD_for_Nexus_4_by_Google" />
+</Properties>

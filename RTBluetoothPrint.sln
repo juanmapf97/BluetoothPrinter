@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTBluetoothPrint", "RTBluetoothPrint\RTBluetoothPrint.csproj", "{3FE8A5A8-AFE8-4545-858F-321AE9829C17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTBluetoothPrint.Droid", "Droid\RTBluetoothPrint.Droid.csproj", "{0F33B939-86FD-4BB3-BFAD-2FE02A994DFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTBluetoothPrint.UITests", "UITests\RTBluetoothPrint.UITests.csproj", "{2EA7948C-678E-445D-B474-F1A6E129D760}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FE8A5A8-AFE8-4545-858F-321AE9829C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE8A5A8-AFE8-4545-858F-321AE9829C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FE8A5A8-AFE8-4545-858F-321AE9829C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FE8A5A8-AFE8-4545-858F-321AE9829C17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F33B939-86FD-4BB3-BFAD-2FE02A994DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F33B939-86FD-4BB3-BFAD-2FE02A994DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F33B939-86FD-4BB3-BFAD-2FE02A994DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F33B939-86FD-4BB3-BFAD-2FE02A994DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA7948C-678E-445D-B474-F1A6E129D760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA7948C-678E-445D-B474-F1A6E129D760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA7948C-678E-445D-B474-F1A6E129D760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA7948C-678E-445D-B474-F1A6E129D760}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

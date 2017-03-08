@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BluetoothLE.Core</name>
+    </assembly>
+    <members>
+        <member name="T:BluetoothLE.Core.CharacteristicPropertyType">
+            <summary>
+            Characteristic property type.
+            </summary></member>
+        <member name="F:BluetoothLE.Core.CharacteristicPropertyType.Broadcast">
+            <summary>
+            The characteristic allows a broadcast
+            </summary></member>
+        <member name="F:BluetoothLE.Core.CharacteristicPropertyType.Read">
+            <summary>
+            The characteristic allows a read.
+            </summary></member>
+        <member name="F:BluetoothLE.Core.CharacteristicPropertyType.AppleWriteWithoutResponse">
+            <summary>
+            The characteristic allows a write without response (Apple-specific)
+            </summary></member>
+        <member name="F:BluetoothLE.Core.CharacteristicPropertyType.WriteWithoutResponse">
+            <summary>
+            The characterisitic allows a write without response
+            </summary></member>
+        <member name="F:BluetoothLE.Core.CharacteristicPropertyType.Notify">
+            <summary>
+            The characteristic allows notify
+            </summary></member>
+        <member name="F:BluetoothLE.Core.CharacteristicPropertyType.Indicate">
+            <summary>
+            The characterisitc allows indicate
+            </summary></member>
+        <member name="F:BluetoothLE.Core.CharacteristicPropertyType.AuthenticatedSignedWrites">
+            <summary>
+            The characteristic allows authenticated signed writes
+            </summary></member>
+        <member name="F:BluetoothLE.Core.CharacteristicPropertyType.ExtendedProperties">
+            <summary>
+            The characteristic has extended properties
+            </summary></member>
+        <member name="F:BluetoothLE.Core.CharacteristicPropertyType.NotifyEncryptionRequired">
+            <summary>
+            The characterisitic requires notify subscription to be encrypted
+            </summary></member>
+        <member name="F:BluetoothLE.Core.CharacteristicPropertyType.IndicateEncryptionRequired">
+            <summary>
+            The characteristic requires indicate subscription to be encrypted
+            </summary></member>
+        <member name="T:BluetoothLE.Core.DeviceState">
+            <summary>
+            Device state.
+            </summary></member>
+        <member name="F:BluetoothLE.Core.DeviceState.Disconnected">
+            <summary>
+            Disconnected state.
+            </summary></member>
+        <member name="F:BluetoothLE.Core.DeviceState.Connecting">
+            <summary>
+            Connecting state.
+            </summary></member>
+        <member name="F:BluetoothLE.Core.DeviceState.Connected">
+            <summary>
+            Connected state.
+            </summary></member>
+        <member name="T:BluetoothLE.Core.IAdapter">
+            <summary>
+            Adapter interface that handles device discovery and connection.
+            </summary></member>
+        <member name="E:BluetoothLE.Core.IAdapter.DeviceDiscovered">
+            <summary>
+            Occurs when device discovered.
+            </summary></member>
+        <member name="E:BluetoothLE.Core.IAdapter.DeviceConnected">
+            <summary>
+            Occurs when device connected.
+            </summary></member>
+        <member name="E:BluetoothLE.Core.IAdapter.DeviceDisconnected">
+            <summary>
+            Occurs when device disconnected.
+            </summary></member>
+        <member name="E:BluetoothLE.Core.IAdapter.DeviceFailedToConnect">
+            <summary>
+            Occurs when a device failed to connect.
+            </summary></member>
+        <member name="E:BluetoothLE.Core.IAdapter.ScanTimeoutElapsed">
+            <summary>
+            Occurs when scan timeout elapsed.
+            </summary></member>
+        <member name="P:BluetoothLE.Core.IAdapter.IsScanning">
+            <summary>
+            Gets a value indicating whether this instance is scanning.
+            </summary>
+            <value><c>true</c> if this instance is scanning; otherwise, <c>false</c>.</value></member>
+        <member name="P:BluetoothLE.Core.IAdapter.ScanTimeout">
+            <summary>
+            Gets or sets the amount of time to scan for devices.
+            </summary>
+            <value>The scan timeout.</value></member>
+        <member name="P:BluetoothLE.Core.IAdapter.ConnectionTimeout">
+            <summary>
+            Gets or sets the amount of time to attempt to connect to a device.
+            </summary>
+            <value>The connection timeout.</value></member>
+        <member name="P:BluetoothLE.Core.IAdapter.DiscoveredDevices">
+            <summary>
+            Gets the discovered devices.
+            </summary>
+            <value>The discovered devices.</value></member>
+        <member name="P:BluetoothLE.Core.IAdapter.ConnectedDevices">
+            <summary>
+            Gets the connected devices.
+            </summary>
+            <value>The connected devices.</value></member>
+        <member name="M:BluetoothLE.Core.IAdapter.StartScanningForDevices">
+            <summary>
+            Start scanning for devices.
+            </summary></member>
+        <member name="M:BluetoothLE.Core.IAdapter.StartScanningForDevices(System.String[])">
+            <summary>
+            Start scanning for devices.
+            </summary>
+            <param name="serviceUuids">White-listed service UUIDs</param></member>
+        <member name="M:BluetoothLE.Core.IAdapter.StopScanningForDevices">
+            <summary>
+            Stop scanning for devices.
+            </summary></member>
+        <member name="M:BluetoothLE.Core.IAdapter.ConnectToDevice(BluetoothLE.Core.IDevice)">
+            <summary>
+            Connect to a device.
+            </summary>
+            <param name="device">The device.</param></member>
+        <member name="M:BluetoothLE.Core.IAdapter.DisconnectDevice(BluetoothLE.Core.IDevice)">
+            <summary>
+            Discconnect from a device.
+            </summary>
+            <param name="device">The device.</param></member>
+        <member name="T:BluetoothLE.Core.ICharacteristic">
+            <summary>
+            Characteristic interface.
+            </summary></member>
+        <member name="E:BluetoothLE.Core.ICharacteristic.ValueUpdated">
+            <summary>
+            Occurs when value updated.
+            </summary></member>
+        <member name="P:BluetoothLE.Core.ICharacteristic.Id">
+            <summary>
+            Gets the unique identifier.
+            </summary>
+            <value>The unique identifier.</value></member>
+        <member name="P:BluetoothLE.Core.ICharacteristic.Uuid">
+            <summary>
+            Gets the UUID.
+            </summary>
+            <value>The UUID.</value></member>
+        <member name="P:BluetoothLE.Core.ICharacteristic.Value">
+            <summary>
+            Gets the characteristic's value.
+            </summary>
+            <value>The characteristic's value.</value></member>
+        <member name="P:BluetoothLE.Core.ICharacteristic.StringValue">
+            <summary>
+            Gets the characteristic's value as a string.
+            </summary>
+            <value>The characteristic's value, interpreted as a string.</value></member>
+        <member name="P:BluetoothLE.Core.ICharacteristic.NativeCharacteristic">
+            <summary>
+            Gets the native characteristic. Should be cast to the appropriate type.
+            </summary>
+            <value>The native characteristic.</value></member>
+        <member name="P:BluetoothLE.Core.ICharacteristic.Properties">
+            <summary>
+            Gets the characteristic's properties
+            </summary>
+            <value>The characteristic's properties.</value></member>
+        <member name="P:BluetoothLE.Core.ICharacteristic.CanRead">
+            <summary>
+            Gets a value indicating whether this instance can read.
+            </summary>
+            <value><c>true</c> if this instance can read; otherwise, <c>false</c>.</value></member>
+        <member name="P:BluetoothLE.Core.ICharacteristic.CanUpdate">
+            <summary>
+            Gets a value indicating whether this instance can update.
+            </summary>
+            <value><c>true</c> if this instance can update; otherwise, <c>false</c>.</value></member>
+        <member name="P:BluetoothLE.Core.ICharacteristic.CanWrite">
+            <summary>
+            Gets a value indicating whether this instance can write.
+            </summary>
+            <value><c>true</c> if this instance can write; otherwise, <c>false</c>.</value></member>
+        <member name="M:BluetoothLE.Core.ICharacteristic.StartUpdates">
+            <summary>
+            Subscribe to the characteristic
+            </summary></member>
+        <member name="M:BluetoothLE.Core.ICharacteristic.StopUpdates">
+            <summary>
+            Unsubscribe from the characteristic
+            </summary></member>
+        <member name="M:BluetoothLE.Core.ICharacteristic.Read">
+            <summary>
+            Read the characteristic's value
+            </summary></member>
+        <member name="M:BluetoothLE.Core.ICharacteristic.Write(System.Byte[])">
+            <summary>
+            Write the specified data to the characteristic
+            </summary>
+            <param name="data">Data.</param></member>
+        <member name="T:BluetoothLE.Core.IDevice">
+            <summary>
+            The device interface.
+            </summary></member>
+        <member name="E:BluetoothLE.Core.IDevice.ServiceDiscovered">
+            <summary>
+            Occurs when services discovered.
+            </summary></member>
+        <member name="P:BluetoothLE.Core.IDevice.Id">
+            <summary>
+            Gets the unique identifier for the device
+            </summary>
+            <value>The device identifier</value></member>
+        <member name="P:BluetoothLE.Core.IDevice.Name">
+            <summary>
+            Gets the device name
+            </summary>
+            <value>The device name</value></member>
+        <member name="P:BluetoothLE.Core.IDevice.Rssi">
+            <summary>
+            Gets the Received Signal Strength Indicator
+            </summary>
+            <value>The RSSI in decibels</value></member>
+        <member name="P:BluetoothLE.Core.IDevice.NativeDevice">
+            <summary>
+            Gets the native device object reference. Should be cast to the appropriate type.
+            </summary>
+            <value>The native device</value></member>
+        <member name="P:BluetoothLE.Core.IDevice.State">
+            <summary>
+            Gets the state of the device
+            </summary>
+            <value>The device's state</value></member>
+        <member name="P:BluetoothLE.Core.IDevice.Services">
+            <summary>
+            Gets the discovered services for the device
+            </summary>
+            <value>The device's services</value></member>
+        <member name="M:BluetoothLE.Core.IDevice.DiscoverServices">
+            <summary>
+            Initiate a service discovery on the device
+            </summary></member>
+        <member name="M:BluetoothLE.Core.IDevice.Disconnect">
+            <summary>
+            Discconnect from the device.
+            </summary></member>
+        <member name="T:BluetoothLE.Core.IService">
+            <summary>
+            The service interface.
+            </summary></member>
+        <member name="E:BluetoothLE.Core.IService.CharacteristicDiscovered">
+            <summary>
+            Occurs when characteristics discovered.
+            </summary></member>
+        <member name="P:BluetoothLE.Core.IService.Id">
+            <summary>
+            Gets the service's unique identifier.
+            </summary>
+            <value>The identifier.</value></member>
+        <member name="P:BluetoothLE.Core.IService.IsPrimary">
+            <summary>
+            Gets a value indicating whether this instance is primary.
+            </summary>
+            <value><c>true</c> if this instance is primary; otherwise, <c>false</c>.</value></member>
+        <member name="P:BluetoothLE.Core.IService.Characteristics">
+            <summary>
+            Gets the service's characteristics.
+            </summary>
+            <value>The characteristics.</value></member>
+        <member name="M:BluetoothLE.Core.IService.DiscoverCharacteristics">
+            <summary>
+            Discovers the characteristics for the services.
+            </summary></member>
+        <member name="T:BluetoothLE.Core.Extensions">
+            <summary>
+            Common Bluetooth extension methods.
+            </summary></member>
+        <member name="M:BluetoothLE.Core.Extensions.Write(BluetoothLE.Core.IDevice,System.String,System.String,System.Byte[])">
+            <summary>
+            Write the specified data to a device.
+            </summary>
+            <param name="device">The device to write the data to.</param>
+            <param name="serviceUuid">The service to write the data to.</param>
+            <param name="characteristicUuid">The characteristic to write the data to.</param>
+            <param name="data">The data to write to the device.</param></member>
+        <member name="M:BluetoothLE.Core.Extensions.ToGuid(System.String)">
+            <summary>
+            Convert a UUID to a Guid by using it as the first part of the Guid {0}-0000-1000-8000-00805f9b34fb
+            </summary>
+            <returns>The Guid representing the supplied UUID.</returns>
+            <param name="uuid">The UUID to convert.
+            If the string is 4 characters, "0000" will be appended before creating the Guid.
+            If the string is 8 characters, nothing is appended before creating the Guid.
+            If the string is not 4 characters or 8 characters, the exact Guid is parsed from the input.
+            </param></member>
+        <member name="T:BluetoothLE.Core.Events.ServiceDiscoveredEventArgs">
+            <summary>
+            Service discovered event arguments.
+            </summary></member>
+        <member name="P:BluetoothLE.Core.Events.ServiceDiscoveredEventArgs.Service">
+            <summary>
+            Gets the service.
+            </summary>
+            <value>The service.</value></member>
+        <member name="M:BluetoothLE.Core.Events.ServiceDiscoveredEventArgs.#ctor(BluetoothLE.Core.IService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BluetoothLE.Core.Events.ServiceDiscoveredEventArgs" /> class.
+            </summary>
+            <param name="service">The service that was discovered.</param></member>
+        <member name="T:BluetoothLE.Core.Events.CharacteristicReadEventArgs">
+            <summary>
+            Characteristic read event arguments.
+            </summary></member>
+        <member name="P:BluetoothLE.Core.Events.CharacteristicReadEventArgs.Characteristic">
+            <summary>
+            Gets the characteristic that was read
+            </summary>
+            <value>The characteristic</value></member>
+        <member name="M:BluetoothLE.Core.Events.CharacteristicReadEventArgs.#ctor(BluetoothLE.Core.ICharacteristic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BluetoothLE.Core.Events.CharacteristicReadEventArgs" /> class.
+            </summary>
+            <param name="characteristic">The characteristic that was read.</param></member>
+        <member name="T:BluetoothLE.Core.Events.DeviceConnectionEventArgs">
+            <summary>
+            Device connection event arguments.
+            </summary></member>
+        <member name="P:BluetoothLE.Core.Events.DeviceConnectionEventArgs.Device">
+            <summary>
+            Gets or sets the device
+            </summary>
+            <value>The device.</value></member>
+        <member name="P:BluetoothLE.Core.Events.DeviceConnectionEventArgs.ErrorMessage">
+            <summary>
+            Gets or sets the error message
+            </summary>
+            <value>The error message, or null if there was no error</value></member>
+        <member name="M:BluetoothLE.Core.Events.DeviceConnectionEventArgs.#ctor(BluetoothLE.Core.IDevice)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BluetoothLE.Core.Events.DeviceConnectionEventArgs" /> class.
+            </summary>
+            <param name="device">The device that was connected/disconnected.</param></member>
+        <member name="T:BluetoothLE.Core.Events.DeviceDiscoveredEventArgs">
+            <summary>
+            Device discovered event arguments.
+            </summary></member>
+        <member name="P:BluetoothLE.Core.Events.DeviceDiscoveredEventArgs.Device">
+            <summary>
+            Gets or sets the device.
+            </summary>
+            <value>The device.</value></member>
+        <member name="M:BluetoothLE.Core.Events.DeviceDiscoveredEventArgs.#ctor(BluetoothLE.Core.IDevice)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BluetoothLE.Core.Events.DeviceDiscoveredEventArgs" /> class.
+            </summary>
+            <param name="device">The device that was discovered.</param></member>
+        <member name="T:BluetoothLE.Core.Events.CharacteristicDiscoveredEventArgs">
+            <summary>
+            Characteristic discovered event arguments.
+            </summary></member>
+        <member name="P:BluetoothLE.Core.Events.CharacteristicDiscoveredEventArgs.Characteristic">
+            <summary>
+            Gets or sets the characteristic that was discovered.
+            </summary>
+            <value>The characteristic.</value></member>
+        <member name="M:BluetoothLE.Core.Events.CharacteristicDiscoveredEventArgs.#ctor(BluetoothLE.Core.ICharacteristic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BluetoothLE.Core.Events.CharacteristicDiscoveredEventArgs" /> class.
+            </summary>
+            <param name="characteristic">The characteristic that was discovered.</param></member>
+    </members>
+</doc>
